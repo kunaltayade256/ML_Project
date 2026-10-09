@@ -1,0 +1,60 @@
+{
+  "model_name": "XGBoost",
+  "features": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]",
+    "Type"
+  ],
+  "numeric_features": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "categorical_features": [
+    "Type"
+  ],
+  "target": "Machine failure",
+  "threshold": 0.7592619061470032,
+  "validation_comparison": {
+    "Random Forest": {
+      "validation_average_precision": 0.640138850396898,
+      "validation_f1": 0.6851851851851852,
+      "validation_threshold": 0.33458135176420994
+    },
+    "XGBoost": {
+      "validation_average_precision": 0.6557161832189173,
+      "validation_f1": 0.6862745098039216,
+      "validation_threshold": 0.7592619061470032
+    },
+    "SVM": {
+      "validation_average_precision": 0.63911515845947,
+      "validation_f1": 0.6504065040650406,
+      "validation_threshold": 0.23799545164584834
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.9793333333333333,
+    "precision": 0.6724137931034483,
+    "recall": 0.7647058823529411,
+    "f1": 0.7155963302752294,
+    "average_precision": 0.7431902339980746,
+    "roc_auc": 0.9653851878915817,
+    "confusion_matrix": [
+      [
+        1430,
+        19
+      ],
+      [
+        12,
+        39
+      ]
+    ]
+  },
+  "dataset_rows": 10000,
+  "failure_rate_percent": 3.39
+}
